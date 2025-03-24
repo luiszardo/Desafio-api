@@ -22,6 +22,11 @@ def init_db():
 init_db()
 
 
+@app.route("/home", methods=["POST"])
+def exibir_mensagem():
+    return "<h2>Bem vindo a API Livros Vai na Web!!!"
+
+
 @app.route("/doar", methods=["POST"])
 def doar():
 
@@ -64,7 +69,7 @@ def listar_livros():
             }
             livros_formatados.append(dicionario_livros)
 
-    return jsonify(livros_formatados),200
+    return jsonify(livros_formatados), 200
 
 
 if __name__ == "__main__":
