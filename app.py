@@ -22,7 +22,7 @@ def init_db():
 init_db()
 
 
-@app.route("/home", methods=["POST"])
+@app.route("/home")
 def exibir_mensagem():
     return "<h2>Bem vindo a API Livros Vai na Web!!!"
 
